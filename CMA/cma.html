@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/29c162d6d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Trade+Winds&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/nomalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Cinema, Mon amour</title>
+  </head>
+
+  <body>
+    <div class="header__container">
+      <div class="header">
+        <div class="header__dailypick">
+          <i class="fas fa-film header__dailypick--camera"></i>
+        </div>
+        <h1 class="header__name">Cinema, Mon Amour</h1>
+        <div class="header__navigation">
+          <div class="header__navigation--tvshow hnav">Highest Rated</div>
+          <div class="header__navigation--movie hnav">NEW</div>
+          <div class="header__navigation--anime hnav">Anime</div>
+        </div>
+      </div>
+    </div>
+    <div class="body__container">
+      <div class="body__popcorn">
+        <img
+          src="./css/img/profile.png"
+          alt="popcorn"
+          class="body__popcornimg"
+        />
+      </div>
+      <div class="body__starlight">
+        <div class="body__starlight--line1"></div>
+        <i class="fas fa-ticket-alt body__starlight--img"></i>
+        <div class="body__starlight--line2"></div>
+      </div>
+
+      <div class="linesAnimation">
+        <div class="line lines"></div>
+        <div class="line1 lines"></div>
+        <div class="line2 lines"></div>
+        <div class="line3 lines"></div>
+        <div class="line4 lines"></div>
+        <div class="line5 lines"></div>
+      </div>
+
+      <div class="body__h1">
+        Do not know what to watch?
+      </div>
+      <div class="body__h2">So say we all!</div>
+
+      <button class="body__container--button" onclick="getStarted()">
+        Get Started!
+      </button>
+      <div class="genre">
+        <button class="tvshow sButton gButton">TV SHOW</button>
+        <button class="movie sButton gButton">MOVIE</button>
+        <button class="anime sButton gButton">ANIME</button>
+      </div>
+
+      <div class="content__container">
+        <img src="" alt="" class="content__img" />
+        <div class="content__spec">
+          <div class="content__spec-ul">
+            Name:
+            <span class="name content__spec-span"></span>
+          </div>
+          <div class="content__spec-ul">
+            IMDb Raiting:
+            <span class="raiting content__spec-span"></span>
+          </div>
+          <div class="content__spec-ul">
+            Release Date:
+            <span class="releaseDate content__spec-span"></span>
+          </div>
+          <div class="content__spec-ul">
+            Genre:
+            <span class="content__genre content__spec-span"></span>
+          </div>
+          <a target="_blank" href="" class="imdbLink">IMDb.com</a>
+        </div>
+      </div>
+      <div class="genre2">
+        <button class="getMovie sButton" onclick="showSuggestion()">
+          Next!
+        </button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer__container">
+        <div class="footer__container--1">
+          ABOUT THIS WEBSITE
+          <div class="footer__container--h">
+            This website was made purely for fun and practice. Just a simple
+            showcase of CSS fundamentals and working with API
+          </div>
+        </div>
+        <div class="footer__container--2">
+          ME ON THE WEB
+          <div class="footer__socialMedia">
+            <a href="https://www.facebook.com/boris.badashvili" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/boreekathegreat/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/boris-badashvili-0a8328182/"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer__container--3">
+          COPYRIGHT DISCLAIMER
+          <div class="footer__container--h">
+            All Posters and Sinopses in this website are based on
+            <a href="http://imdb.com" target="_blank">IMDB.com</a> I do not own
+            copyright for those. For the full information on each movie please
+            visit their website.
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        Copyright @ Boris Badashvili
+        <span>TWENTyTWENTy</span>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
