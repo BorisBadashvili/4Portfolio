@@ -1,0 +1,10 @@
+.canvas { 
+    border: 1px solid black;
+}
+.imageWrapper {
+    display: none;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
