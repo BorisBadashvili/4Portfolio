@@ -17,37 +17,46 @@ class Snake {
       y: this.coordinates[0].y + this.direction.y,
     };
     this.coordinates.unshift(head);
-    // this.coordinates.shift();
 
     const didEatFood =
       this.coordinates[0].x === food.coordinates.x &&
       this.coordinates[0].y === food.coordinates.y;
 
     if (didEatFood) {
-      document.querySelector(".score").innerHTML = "Haha worked!";
+      document.querySelector(".score").innerHTML = "worked!";
       food.createFood();
+    } else {
+      this.coordinates.pop();
     }
   }
   drawSnake() {
-    // ctx.drawImage(
-    //   this.images.head,
-    //   this.coordinates[0].x,
-    //   this.coordinates[0].y,
-    //   this.size,
-    //   this.size
-    // );
-
     for (let i = 0; i < this.coordinates.length; i++) {
       if (this.coordinates[0] == this.coordinates[i]) {
-        for (let j = 1; j < this.coordinates.length; j++) {
-          ctx.drawImage(
-            this.images.head,
-            this.coordinates[0].x,
-            this.coordinates[0].y,
-            this.size,
-            this.size
-          );
-        }
+        ctx.drawImage(
+          this.images.head,
+          this.coordinates[0].x,
+          this.coordinates[0].y,
+          this.size,
+          this.size
+        );
+      }
+      for (let k = 1; k < this.coordinates.length; k++) {
+        ctx.drawImage(
+          this.images.body,
+          this.coordinates[k].x,
+          this.coordinates[k].y,
+          this.size,
+          this.size
+        );
+      }
+      if (this.coordinates.length == i - 1) {
+        ctx.drawImage(
+          this.images.tail,
+          this.coordinates[k].x,
+          this.coordinates[k].y,
+          this.size,
+          this.size
+        );
       }
     }
   }
