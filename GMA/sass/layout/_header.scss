@@ -1,0 +1,33 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        $color-primary-light,
+        $color-primary-dark
+      ),
+      url("https://live.staticflickr.com/65535/48581371966_2cf83a1fdc_b.jpg");
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    position: relative;
+  
+    &__logo-box {
+      position: absolute;
+      top: 0.1rem;
+      left: 0.1rem;
+    }
+    &__logo {
+      height: 35rem;
+    }
+  
+    &__text-box {
+      position: absolute;
+      top: 37.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+
+  
+  

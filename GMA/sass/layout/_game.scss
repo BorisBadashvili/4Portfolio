@@ -1,0 +1,11 @@
+.game {
+    width: 64vw;
+    margin:auto;
+
+    &__section1 {
+        flex: 1;
+    }
+    &__section2 {
+        flex: 1;
+    }
+}

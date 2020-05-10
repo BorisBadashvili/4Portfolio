@@ -1,0 +1,25 @@
+.flexbox {
+  display: flex;
+}
+.u-center-text {
+  text-align: center;
+}
+.u-margin-top {
+  &__2 {
+    margin-top: 2rem;
+  }
+  &__4 {
+    margin-top: 4rem;
+  }
+}
+.u_margin_bot {
+  &__2 {
+    margin-bottom: 2rem;
+  }
+  &__3 {
+    margin-bottom: 3rem;
+  }
+  &__6 {
+    margin-bottom: 6rem;
+  }
+}
