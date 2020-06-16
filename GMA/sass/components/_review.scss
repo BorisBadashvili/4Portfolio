@@ -1,0 +1,83 @@
+.review--btn {
+  padding-top: 5rem;
+  text-align: center;
+}
+.reviews-heading {
+  text-align: center;
+  margin-bottom: 12rem;
+  text-transform: uppercase;
+  color: $color-primary-dark;
+  font-size: 3rem;
+}
+.review__container {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-white;
+  border-radius: 3px;
+  width: 60%;
+  margin: auto;
+  transform: skewX(-12deg);
+  @include respond(tab-port) {
+    width: 90%;
+    transform: skewX(0);
+  }
+  &--2 {
+    margin-bottom: 10rem;
+  }
+  &--img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+  }
+  &--figure {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+    transform: skewX(12deg);
+          
+    @include respond(tab-port) {
+      width: 18rem;
+      height: 18rem;
+      text-align: center;
+      transform: skewX(0);
+    }
+    & > img {
+      height: 100%;
+      
+      @include respond(tab-port) {
+        height: 15rem;
+        width: 15rem;
+      }
+    }
+  }
+
+  &--text {
+    transform: skewX(12deg);
+    @include respond(tab-port) {
+      transform: skewX(0);
+    }
+    flex: 3;
+    & > h4 {
+      padding: 1.6rem 0;
+      font-size: 1.7rem;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      @include respond(tab-port) {
+        font-size: 1.45rem;
+      }
+    }
+    & > p {
+      display: block;
+      font-size: 1.5rem;
+      padding: 0 1.5rem 2rem 1rem;
+      font-weight: 400;
+      @include respond(tab-port) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

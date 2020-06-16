@@ -8,4 +8,8 @@
     &__section2 {
         flex: 1;
     }
+
+    @include respond(tab-port) {
+        flex-direction: column;
+      }
 }

@@ -1,8 +1,17 @@
 .composition {
   padding-bottom: 20rem;
   position: relative;
-
+  @include respond(tab-port) {
+    padding-top: 8rem;
+    padding-bottom: 0;
+    text-align: center;
+  }
   &__photo {
+    @include respond(tab-port) {
+      position: static;
+      margin: 1.5rem;
+      // height: 11.5rem;
+    }
     width: 54%;
     height: 100%;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);

@@ -8,9 +8,24 @@
 
 html {
   // REM definition (10px) this case.
-  font-size: 62.5%;
+  // font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1 rem = 12px
+  }
 }
 
 body {
+  padding: 3rem;
   box-sizing: border-box;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

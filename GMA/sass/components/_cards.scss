@@ -1,0 +1,90 @@
+.card {
+
+  @include respond (tab-port) {
+    margin-bottom: 3rem;
+  }
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  width: 34.5rem;
+  height: 50rem;
+  position: relative;
+  &__side {
+    color: white;
+    transition: all 0.8s ease;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &--front {
+      background-color: $color-white;
+      width: 34.5rem;
+      height: 50rem;
+    }
+    &--back {
+      width: 34.5rem;
+      height: 50rem;
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+        background-size: cover;
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &--1 {
+      background-image: url(img/dota3.jpg);
+    }
+    &--2 {
+      background-image: url(img/csgo.jpg);
+    }
+    &--3 {
+      background-image: url(img/hearthstone.jpg);
+    }
+  }
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-primary-dark;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+  }
+  &__details > ul > li {
+    list-style-type: none;
+    color: $color-primary-dark;
+    border-bottom: 1px solid $color-primary-dark;
+    width: 70%;
+    margin: auto;
+    padding-top: 2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+}
